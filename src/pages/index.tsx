@@ -1,1 +1,1 @@
-export { default as AuthenticationWrapper } from './authentication';
+export { default as AuthenticationPage } from './authentication';

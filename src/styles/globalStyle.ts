@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
     html {
         width: 100vw;
         height: 100vh;
-        
+        font-family: 'Inter';
         /* font-family: 'Lato', sans-serif;
         font-family: 'Oswald', sans-serif;
         font-family: 'Passion One', cursive; */
@@ -17,10 +17,6 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
     }
     
-    h3{
-        font-family: "Lexend";
-        font-weight: 500;
-    }
     :root{
 
         --white-100: #dfdfdf;
@@ -41,8 +37,9 @@ const GlobalStyles = createGlobalStyle`
 
         --cyan-800: #00aff4;
 
+        --purple-100: #4A52A1;
         --purple-500: #444b98;
-
+       
         --bg-blue-900: #3a4252;
 
         --bg-gray-800: rgba(130, 132, 135, 0.5);

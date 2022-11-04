@@ -12,6 +12,9 @@ const Container = styled.div`
   border-radius: 10px 10px 0 0;
   -webkit-app-region: drag;
   user-select: false;
+  z-index: 5;
+  position: fixed;
+  top: 0;
 `;
 
 const OptionWrapper = styled.div`
