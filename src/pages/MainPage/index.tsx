@@ -8,11 +8,21 @@ const Container = styled.div`
   background-color: var(--gray-900);
   display: flex;
 `;
+
+export type ChoosenPage =
+  | 'news'
+  | 'routine'
+  | 'exercises'
+  | 'music'
+  | 'chart'
+  | 'settings';
+
 export default function MainPage() {
+  const [page, setPage] = React.useState<ChoosenPage>('news');
   return (
     <Container>
-      <NavBar />
-      <WindowRender />
+      <NavBar page={page} callback={setPage} />
+      <WindowRender page={page} />
     </Container>
   );
 }

@@ -1,3 +1,4 @@
+import { ChoosenPage } from '@/pages/MainPage';
 import React from 'react';
 
 import {
@@ -15,64 +16,90 @@ import {
 } from './style';
 
 interface IconProps {
-  type: 'news' | 'form' | 'exercise' | 'music' | 'dashboard' | 'settings';
+  type: 'news' | 'routine' | 'exercises' | 'music' | 'chart' | 'settings';
+  page: 'news' | 'routine' | 'exercises' | 'music' | 'chart' | 'settings';
+  callback: React.Dispatch<React.SetStateAction<ChoosenPage>>;
 }
-function Icon({ type }: IconProps) {
+function Icon({ page, type, callback }: IconProps) {
   const [hover, setHover] = React.useState<boolean>(false);
   return (
     <InteractableBox
       onMouseEnter={() => setHover((prev) => !prev)}
       onMouseLeave={() => setHover((prev) => !prev)}
+      onClick={() => callback(type)}
       style={{
-        backgroundColor: hover ? 'var(--bg-gray-400) ' : 'var(--gray-900)',
+        backgroundColor:
+          hover || page === type ? 'var(--bg-gray-400) ' : 'var(--gray-900)',
       }}
     >
       {type === 'news' && (
         <Journal
-          style={{ color: hover ? 'var(--white-100)' : 'var(--black-900)' }}
+          style={{
+            color:
+              hover || page === type ? 'var(--white-100)' : 'var(--black-900)',
+          }}
         />
       )}
-      {type === 'form' && (
+      {type === 'routine' && (
         <Form
-          style={{ color: hover ? 'var(--white-100)' : 'var(--black-900)' }}
+          style={{
+            color:
+              hover || page === type ? 'var(--white-100)' : 'var(--black-900)',
+          }}
         />
       )}
-      {type === 'exercise' && (
+      {type === 'exercises' && (
         <Exercise
-          style={{ color: hover ? 'var(--white-100)' : 'var(--black-900)' }}
+          style={{
+            color:
+              hover || page === type ? 'var(--white-100)' : 'var(--black-900)',
+          }}
         />
       )}
       {type === 'music' && (
         <Spotify
-          style={{ color: hover ? 'var(--white-100)' : 'var(--black-900)' }}
+          style={{
+            color:
+              hover || page === type ? 'var(--white-100)' : 'var(--black-900)',
+          }}
         />
       )}
-      {type === 'dashboard' && (
+      {type === 'chart' && (
         <Chart
-          style={{ color: hover ? 'var(--white-100)' : 'var(--black-900)' }}
+          style={{
+            color:
+              hover || page === type ? 'var(--white-100)' : 'var(--black-900)',
+          }}
         />
       )}
       {type === 'settings' && (
         <Settings
-          style={{ color: hover ? 'var(--white-100)' : 'var(--black-900)' }}
+          style={{
+            color:
+              hover || page === type ? 'var(--white-100)' : 'var(--black-900)',
+          }}
         />
       )}
     </InteractableBox>
   );
 }
 
-export default function NavBar() {
+interface NavBarProps {
+  page: 'news' | 'routine' | 'exercises' | 'music' | 'chart' | 'settings';
+  callback: React.Dispatch<React.SetStateAction<ChoosenPage>>;
+}
+export default function NavBar({ page, callback }: NavBarProps) {
   return (
     <Container>
       <Logo />
       <Divider />
       <BoxWrapper>
-        <Icon type="news" />
-        <Icon type="form" />
-        <Icon type="exercise" />
-        <Icon type="music" />
-        <Icon type="dashboard" />
-        <Icon type="settings" />
+        <Icon callback={callback} page={page} type="news" />
+        <Icon callback={callback} page={page} type="routine" />
+        <Icon callback={callback} page={page} type="exercises" />
+        <Icon callback={callback} page={page} type="music" />
+        <Icon callback={callback} page={page} type="chart" />
+        <Icon callback={callback} page={page} type="settings" />
       </BoxWrapper>
     </Container>
   );
