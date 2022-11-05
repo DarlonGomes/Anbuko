@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  min-width: 445px;
-  min-height: 200px;
   background-color: var(--gray-900-80);
+  width: 380px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;

@@ -1,16 +1,18 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
 interface FormValue {
   email: string;
   password: string;
+  birthday: string;
+  news: boolean;
 }
-export function useLogInForm() {
-  const navigate = useNavigate();
+export default function useLogInForm() {
   const [status, setStatus] = React.useState<boolean>(false);
   const [values, setValues] = React.useState<FormValue>({
     email: '',
     password: '',
+    birthday: '',
+    news: false,
   });
 
   const handleChange =
@@ -25,6 +27,8 @@ export function useLogInForm() {
       setValues({
         email: '',
         password: '',
+        birthday: '',
+        news: false,
       });
     }, 3000);
   };

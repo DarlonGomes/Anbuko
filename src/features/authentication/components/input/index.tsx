@@ -28,6 +28,9 @@ export default function AuthInput({
         placeholder={placeholder}
         disabled={status}
         autoComplete="off"
+        style={{
+          backgroundColor: status ? 'var(--gray-900)' : 'var(--black-300)',
+        }}
       />
       {type === 'email' && <EmailIcon />}
       {type === 'password' && <PasswordIcon />}

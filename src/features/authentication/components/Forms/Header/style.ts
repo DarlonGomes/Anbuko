@@ -9,12 +9,14 @@ const Header = styled.div`
 const Title = styled.h3`
   font-weight: 600;
   font-size: 22px;
+  letter-spacing: 0.55px;
   color: var(--white-100);
 `;
 
 const Subtitle = styled.span`
   font-weight: 400;
   font-size: 14px;
+  letter-spacing: 0.25px;
   color: var(--white-100);
   margin-top: 10px;
 `;

@@ -1,18 +1,19 @@
-import { useLogInForm } from '@/features/authentication/hooks/useLogInForm';
 import React from 'react';
 
+import useRegisterForm from '../../../hooks/useRegisterForm';
 import { AuthStep } from '../../Background';
 import AuthInput from '../../input';
+import CheckBox from '../checkbox';
 import Footer from '../Footer';
 import { Form } from '../style';
 
 interface FormProps {
   changeMethod: React.Dispatch<React.SetStateAction<AuthStep>>;
 }
-export default function SignInForm({ changeMethod }: FormProps) {
-  const { status, values, handleChange, handleSubmit } = useLogInForm();
+export default function SignUpForm({ changeMethod }: FormProps) {
+  const { status, values, handleChange, handleSubmit } = useRegisterForm();
   return (
-    <Form onSubmit={(event) => handleSubmit(event)}>
+    <Form>
       <AuthInput
         text="Email"
         type="email"
@@ -29,7 +30,12 @@ export default function SignInForm({ changeMethod }: FormProps) {
         status={status}
         callback={handleChange('password')}
       />
-      <Footer status={status} type="Log In" changeMethod={changeMethod} />
+      <CheckBox
+        value={values.news}
+        status={status}
+        callback={handleChange('news')}
+      />
+      <Footer status={status} type="Register" changeMethod={changeMethod} />
     </Form>
   );
 }

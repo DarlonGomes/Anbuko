@@ -16,14 +16,14 @@ const InputTitle = styled.h5`
 `;
 const Input = styled.input`
   height: 40px;
-  width: 405px;
+  width: 320px;
   border-radius: 5px;
   border: 1px solid var(--gray-900);
-  background-color: var(--black-300);
   padding: 0 35px;
   font-size: 14px;
   font-weight: 400;
   color: var(--gray-100);
+  letter-spacing: 0.55px;
   ::placeholder {
     color: var(--gray-300);
   }

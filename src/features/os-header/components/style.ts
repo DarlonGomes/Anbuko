@@ -25,6 +25,7 @@ const OptionWrapper = styled.div`
 `;
 
 const Title = styled.h5`
+  font-weight: 600;
   font-size: 12px;
   color: var(--white-900);
 `;

@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
 
         --white-100: #dfdfdf;
         --white-200: #b9bbbe;
+        --white-400: #7BA2D7;
         --white-900: #ffffff;
 
         --gray-100: #b9bbbe;
@@ -35,10 +36,11 @@ const GlobalStyles = createGlobalStyle`
         --black-900-90: rgba(0,0,0, 0.9);
         --black-900: #000000;
 
-        --cyan-800: #00aff4;
+        --indigo-300: #A5B4FC;
 
-        --purple-100: #4A52A1;
-        --purple-500: #444b98;
+        --purple-100: #4752C4;
+        --purple-500: #5865F2;
+  
        
         --bg-blue-900: #3a4252;
 
