@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
         --gray-100: #b9bbbe;
         --gray-200-10: rgba(131,131,131, 0.1);
         --gray-300: #879090;
+        --gray-400: #757474;
         --gray-900-80: rgba(54,57,63, 0.8);
         --gray-900: #4B4B4B;
 

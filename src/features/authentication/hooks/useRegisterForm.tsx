@@ -17,7 +17,14 @@ export default function useLogInForm() {
 
   const handleChange =
     (prop: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
-      setValues({ ...values, [prop]: event.target.value });
+      setValues({ ...values, [prop]: event?.target?.value });
+    };
+
+  const handleClick =
+    (prop: string) =>
+    (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+      console.log(event);
+      setValues({ ...values, [prop]: !values.news });
     };
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -33,5 +40,5 @@ export default function useLogInForm() {
     }, 3000);
   };
 
-  return { status, values, handleChange, handleSubmit };
+  return { status, values, handleChange, handleSubmit, handleClick };
 }

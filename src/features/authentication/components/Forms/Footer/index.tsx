@@ -21,7 +21,10 @@ export default function Footer({ status, type, changeMethod }: Props) {
           <TextWrapper>
             <LightText>
               Don't have an account?
-              <Anchor onClick={() => changeMethod('register')}> Register</Anchor>
+              <Anchor onClick={() => changeMethod('register')}>
+                {' '}
+                Register
+              </Anchor>
             </LightText>
           </TextWrapper>
         </>
@@ -36,6 +39,9 @@ export default function Footer({ status, type, changeMethod }: Props) {
               <Anchor> Privacy Policy</Anchor>
             </LightText>
           </TextWrapper>
+          <Anchor onClick={() => changeMethod('log-in')}>
+            Already have an account?
+          </Anchor>
         </>
       )}
     </Container>

@@ -9,9 +9,6 @@ const Button = styled.button`
   font-weight: 600;
   color: var(--white-900);
   letter-spacing: 0.55px;
-  :hover {
-    background-color: var(--purple-100);
-  }
 `;
 
 export { Button };

@@ -11,7 +11,8 @@ interface FormProps {
   changeMethod: React.Dispatch<React.SetStateAction<AuthStep>>;
 }
 export default function SignUpForm({ changeMethod }: FormProps) {
-  const { status, values, handleChange, handleSubmit } = useRegisterForm();
+  const { status, values, handleChange, handleSubmit, handleClick } =
+    useRegisterForm();
   return (
     <Form>
       <AuthInput
@@ -33,7 +34,7 @@ export default function SignUpForm({ changeMethod }: FormProps) {
       <CheckBox
         value={values.news}
         status={status}
-        callback={handleChange('news')}
+        callback={handleClick('news')}
       />
       <Footer status={status} type="Register" changeMethod={changeMethod} />
     </Form>

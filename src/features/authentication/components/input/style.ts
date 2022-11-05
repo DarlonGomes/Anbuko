@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 const InputTitle = styled.h5`
   font-weight: 600;
   font-size: 14px;
+  letter-spacing: 0.3px;
   color: var(--white-200);
 `;
 const Input = styled.input`

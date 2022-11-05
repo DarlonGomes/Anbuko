@@ -7,12 +7,16 @@ interface ButtonProps {
   status: boolean;
 }
 export default function FormButton({ message, status }: ButtonProps) {
+  const [hover, setHover] = React.useState<boolean>(false);
   return (
     <Button
       type="submit"
       disabled={status}
+      onMouseEnter={() => setHover((prev) => !prev)}
+      onMouseLeave={() => setHover((prev) => !prev)}
       style={{
-        backgroundColor: status ? 'var(--purple-100)' : 'var(--purple-500)',
+        backgroundColor:
+          status || hover ? 'var(--purple-100)' : 'var(--purple-500)',
       }}
     >
       {message}
