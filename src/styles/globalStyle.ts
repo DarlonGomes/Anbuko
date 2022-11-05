@@ -44,7 +44,7 @@ const GlobalStyles = createGlobalStyle`
   
        
         --bg-blue-900: #3a4252;
-
+        --bg-gray-400: #676869;
         --bg-gray-800: rgba(130, 132, 135, 0.5);
 
     }

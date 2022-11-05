@@ -26,6 +26,7 @@ export function useLogInForm() {
         email: '',
         password: '',
       });
+      navigate('/app');
     }, 3000);
   };
 

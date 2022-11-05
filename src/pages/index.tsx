@@ -1,2 +1,2 @@
-export { default as AuthenticationPage } from './authentication';
-export { default as MainPage } from './dashboard';
+export { default as AuthenticationPage } from './AuthPage';
+export { default as MainPage } from './MainPage';
