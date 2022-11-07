@@ -37,31 +37,31 @@ export default function RoutineRender() {
       <SectionTitle>Routine steps</SectionTitle>
       <FormWrapper>
         <RoutineStep
-          image=""
-          icon=""
+          image="racconbed"
+          icon="ambient"
           title="Ambient"
           description="Help us know the kind of enviroment you will use our app"
           done
         />
         <RoutineStep
-          image=""
-          icon=""
-          title="Ambient"
-          description="Help us know the kind of enviroment you will use our app"
+          image="chillingcoffee"
+          icon="schedule"
+          title="Schedule"
+          description="Let's align your schedule"
           done={false}
         />
         <RoutineStep
-          image=""
-          icon=""
-          title="Ambient"
-          description="Help us know the kind of enviroment you will use our app"
+          image="racconeating"
+          icon="health"
+          title="Uncomfortable"
+          description="What makes you uncomfortable during your routine?"
           done={false}
         />
         <RoutineStep
-          image=""
-          icon=""
-          title="Ambient"
-          description="Help us know the kind of enviroment you will use our app"
+          image="doglofi"
+          icon="membership"
+          title="Membership"
+          description="Want to take a step further ? Checkout our plans"
           done={false}
         />
       </FormWrapper>

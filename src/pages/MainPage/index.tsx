@@ -7,6 +7,7 @@ const Container = styled.div`
   min-height: 650px;
   background-color: var(--gray-900);
   display: flex;
+  border-radius: 10px;
 `;
 
 export type ChoosenPage =

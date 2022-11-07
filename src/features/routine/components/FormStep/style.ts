@@ -1,5 +1,6 @@
-import { BsPatchCheckFill } from 'react-icons/bs';
-import { MdHomeWork } from 'react-icons/md';
+import { BsPatchCheckFill, BsCalendar3 } from 'react-icons/bs';
+import { MdHomeWork, MdCardMembership } from 'react-icons/md';
+import { RiMentalHealthLine } from 'react-icons/ri';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -10,12 +11,21 @@ const Container = styled.div`
   background-color: var(--gray-900);
   border-radius: 6px;
   position: relative;
-  border: 1px solid var(--border-black);
+  border: 1px solid var(--border-black-2);
+  transition: transform 1s;
+  cursor: pointer;
 `;
 
-const Backsplash = styled.img`
-  width: 230px;
+const BacksplashContainer = styled.div`
+  border-radius: 6px 6px 0 0;
+  width: 100%;
   height: 166px;
+  overflow: hidden;
+`;
+const Backsplash = styled.img`
+  width: 100%;
+  height: 100%;
+  transition: transform 1s, filter 2s ease-in-out;
   object-fit: cover;
   border-radius: 6px 6px 0 0;
 `;
@@ -85,12 +95,27 @@ const Ambience = styled(MdHomeWork)`
   color: var(--gray-100);
 `;
 
+const Schedule = styled(BsCalendar3)`
+  font-size: 25px;
+  color: var(--gray-100);
+`;
+
+const Health = styled(RiMentalHealthLine)`
+  font-size: 25px;
+  color: var(--gray-100);
+`;
+
+const Membership = styled(MdCardMembership)`
+  font-size: 25px;
+  color: var(--gray-100);
+`;
 const Done = styled(BsPatchCheckFill)`
   font-size: 32px;
   color: var(--green-600-10);
 `;
 export {
   Container,
+  BacksplashContainer,
   Backsplash,
   IconBg,
   IconBox,
@@ -99,5 +124,8 @@ export {
   InfoTitle,
   StatusBox,
   Ambience,
+  Schedule,
+  Health,
+  Membership,
   Done,
 };

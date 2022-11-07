@@ -15,6 +15,7 @@ const Container = styled.div`
   flex-direction: column;
   gap: 10px;
   padding: 5px 0;
+  border-radius: 0 0 0 5px;
 `;
 
 const Divider = styled.div`

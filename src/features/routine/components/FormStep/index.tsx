@@ -1,8 +1,12 @@
 import React from 'react';
 
-import raccoon from '../../../../assets/images/racconlofi.jpg';
+import chillingcofee from '../../../../assets/images/chillingcoffe.jpg';
+import dogchilling from '../../../../assets/images/doglofi.jpeg';
+import racconeating from '../../../../assets/images/racconeating.jpeg';
+import racconbed from '../../../../assets/images/racconlofi.jpg';
 import {
   Container,
+  BacksplashContainer,
   Backsplash,
   IconBox,
   IconBg,
@@ -11,6 +15,9 @@ import {
   InfoDescription,
   StatusBox,
   Ambience,
+  Schedule,
+  Health,
+  Membership,
   Done,
 } from './style';
 
@@ -27,7 +34,10 @@ function IconWrapper({ type }: IconProps) {
   return (
     <IconBox>
       <IconBg>
-        <Ambience />
+        {type === 'ambient' && <Ambience />}
+        {type === 'schedule' && <Schedule />}
+        {type === 'health' && <Health />}
+        {type === 'membership' && <Membership />}
       </IconBg>
     </IconBox>
   );
@@ -47,9 +57,58 @@ export default function RoutineStep({
   description,
   done,
 }: RoutineStepProps) {
+  const [hover, setHover] = React.useState<boolean>(false);
   return (
-    <Container>
-      <Backsplash src={raccoon} alt={title} />
+    <Container
+      onMouseEnter={() => setHover((prev) => !prev)}
+      onMouseLeave={() => setHover((prev) => !prev)}
+      style={{
+        transform: hover ? 'scale(1.06)' : 'scale(1)',
+      }}
+    >
+      <BacksplashContainer>
+        {image === 'racconbed' && (
+          <Backsplash
+            src={racconbed}
+            alt={title}
+            //   style={{
+            //     filter: hover ? 'blur(0)' : 'blur(0.5px)',
+            //     transform: hover ? 'scale(1.2)' : 'scale(1)',
+            //   }}
+          />
+        )}
+        {image === 'chillingcoffee' && (
+          <Backsplash
+            src={chillingcofee}
+            alt={title}
+            //   style={{
+            //     filter: hover ? 'blur(0)' : 'blur(0.5px)',
+            //     transform: hover ? 'scale(1.2)' : 'scale(1)',
+            //   }}
+          />
+        )}
+        {image === 'racconeating' && (
+          <Backsplash
+            src={racconeating}
+            alt={title}
+            //   style={{
+            //     filter: hover ? 'blur(0)' : 'blur(0.5px)',
+            //     transform: hover ? 'scale(1.2)' : 'scale(1)',
+            //   }}
+          />
+        )}
+        {image === 'doglofi' && (
+          <Backsplash
+            src={dogchilling}
+            alt={title}
+            //   style={{
+            //     filter: hover ? 'blur(0)' : 'blur(0.5px)',
+            //     transform: hover ? 'scale(1.2)' : 'scale(1)',
+            //   }}
+          />
+        )}
+      </BacksplashContainer>
+
       <IconWrapper type={icon} />
       <StepInfo>
         <InfoTitle>{title}</InfoTitle>

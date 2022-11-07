@@ -54,6 +54,7 @@ const GlobalStyles = createGlobalStyle`
         --bg-gray-800: rgba(130, 132, 135, 0.5);
 
         --border-black: rgba(0, 0, 0, 0.11);
+        --border-black-2: rgba(0, 0, 0, 1);
 
         --trans-white: rgba(255, 255, 255, 0.2);
     }
