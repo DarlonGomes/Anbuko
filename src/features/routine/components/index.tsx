@@ -9,6 +9,7 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
 
 const Backsplash = styled.img`
@@ -30,7 +31,11 @@ const FormWrapper = styled.div`
   display: flex;
   gap: 73px;
 `;
-export default function RoutineRender() {
+
+interface RenderProps {
+  callback: React.Dispatch<React.SetStateAction<string | null>>;
+}
+export default function RoutineRender({ callback }: RenderProps) {
   return (
     <Container>
       <Backsplash src={duck} alt="cool image" />
@@ -42,6 +47,7 @@ export default function RoutineRender() {
           title="Ambient"
           description="Help us know the kind of enviroment you will use our app"
           done
+          callback={callback}
         />
         <RoutineStep
           image="chillingcoffee"
@@ -49,6 +55,7 @@ export default function RoutineRender() {
           title="Schedule"
           description="Let's align your schedule"
           done={false}
+          callback={callback}
         />
         <RoutineStep
           image="racconeating"
@@ -56,6 +63,7 @@ export default function RoutineRender() {
           title="Uncomfortable"
           description="What makes you uncomfortable during your routine?"
           done={false}
+          callback={callback}
         />
         <RoutineStep
           image="doglofi"
@@ -63,6 +71,7 @@ export default function RoutineRender() {
           title="Membership"
           description="Want to take a step further ? Checkout our plans"
           done={false}
+          callback={callback}
         />
       </FormWrapper>
     </Container>

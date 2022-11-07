@@ -11,8 +11,8 @@ const Container = styled.div`
   background-color: var(--gray-900);
   border-radius: 6px;
   position: relative;
-  border: 1px solid var(--border-black-2);
-  transition: transform 1s;
+  border: 1px solid var(--black-900);
+  transition: transform 0.6s;
   cursor: pointer;
 `;
 
@@ -73,9 +73,10 @@ const InfoTitle = styled.h5`
 
 const InfoDescription = styled.p`
   font-weight: 400;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.25px;
   color: var(--white-100);
+  text-justify: kashida;
   margin-top: 10px;
 `;
 

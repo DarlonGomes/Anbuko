@@ -49,6 +49,7 @@ interface RoutineStepProps {
   title: string;
   description: string;
   done: boolean;
+  callback: React.Dispatch<React.SetStateAction<string | null>>;
 }
 export default function RoutineStep({
   image,
@@ -56,8 +57,10 @@ export default function RoutineStep({
   title,
   description,
   done,
+  callback,
 }: RoutineStepProps) {
   const [hover, setHover] = React.useState<boolean>(false);
+
   return (
     <Container
       onMouseEnter={() => setHover((prev) => !prev)}
@@ -65,6 +68,7 @@ export default function RoutineStep({
       style={{
         transform: hover ? 'scale(1.06)' : 'scale(1)',
       }}
+      onClick={() => callback(title)}
     >
       <BacksplashContainer>
         {image === 'racconbed' && (
