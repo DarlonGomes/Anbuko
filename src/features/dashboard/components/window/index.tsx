@@ -4,7 +4,7 @@ import {
   MusicPage,
   NewsPage,
   RoutinePage,
-  SettingsPage
+  SettingsPage,
 } from '@/pages';
 import React from 'react';
 

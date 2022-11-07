@@ -13,8 +13,6 @@ const Container = styled.div`
   -webkit-app-region: drag;
   user-select: false;
   z-index: 5;
-  position: fixed;
-  top: 0;
 `;
 
 const OptionWrapper = styled.div`
