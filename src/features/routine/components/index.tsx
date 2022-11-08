@@ -50,7 +50,7 @@ export default function RoutineRender({ callback }: RenderProps) {
           callback={callback}
         />
         <RoutineStep
-          image="chillingcoffee"
+          image="foxfox"
           icon="schedule"
           title="Schedule"
           description="Let's align your schedule"

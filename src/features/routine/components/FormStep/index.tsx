@@ -1,7 +1,7 @@
 import React from 'react';
 
-import chillingcofee from '../../../../assets/images/chillingcoffe.jpg';
 import dogchilling from '../../../../assets/images/doglofi.jpeg';
+import foxfox from '../../../../assets/images/foxfox.jpeg';
 import racconeating from '../../../../assets/images/racconeating.jpeg';
 import racconbed from '../../../../assets/images/racconlofi.jpg';
 import {
@@ -81,9 +81,9 @@ export default function RoutineStep({
             //   }}
           />
         )}
-        {image === 'chillingcoffee' && (
+        {image === 'foxfox' && (
           <Backsplash
-            src={chillingcofee}
+            src={foxfox}
             alt={title}
             //   style={{
             //     filter: hover ? 'blur(0)' : 'blur(0.5px)',
