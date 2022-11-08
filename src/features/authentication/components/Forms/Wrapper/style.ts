@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  height: calc(100% - 25px);
+  height: 100%;
   display: flex;
   align-items: center;
-  margin-left: 70px;
+  margin-left: 10%;
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0px;
   z-index: 1;
 `;
@@ -20,6 +20,7 @@ const Content = styled.div`
   box-sizing: border-box;
   padding: 20px 30px;
   gap: 10px;
+  border: 1px solid var(--border-black);
 `;
 
 export { Container, Content };
